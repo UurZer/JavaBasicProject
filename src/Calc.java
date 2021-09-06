@@ -2,6 +2,7 @@ import java.text.DecimalFormat;
 
 public class Calc
 {
+	// ------Deðiþkenlerimiz ------
 	public double WorldWeight;
 	public double MercuryWeight;
 	public double VenusWeight;
@@ -11,9 +12,12 @@ public class Calc
 	public double NeptuneWeight;
 	public double UranusWeight;
 	public double MoonWeight;
+	// ------Deðiþkenlerimiz ------
 	
 	
+	// ------Constructor(Yapýcý) Method ------
 	public Calc(int weight) {
+		//Baþlangýçta ilk olarak atanan tüm gezegenlerin deðerlerinin hesaplanmasý
 		this.WorldWeight=weight*1.0;
 		this.MercuryWeight= weight*0.38;
 		this.VenusWeight=weight*0.91;
@@ -24,7 +28,10 @@ public class Calc
 		this.UranusWeight=weight*0.92;
 		this.MoonWeight=weight*0.16;
 	}
-
+	// ------Constructor(Yapýcý) Method ------
+	
+	
+	//Hesaplanan deðerleri ekrana basýldýðý method
 	public void printWeights()
 	{
 		System.out.print("Dünyada "+this.WorldWeight+"kg olan bir cismin aðýrlýðý:"
@@ -33,8 +40,9 @@ public class Calc
 				+ "\nMarsda aðýrlýðý: "+this.MarsWeight
 				+ "\nSatürnde aðýrlýðý: "+this.SaturnWeight
 				+ "\nJupiterde aðýrlýðý: "+this.JupiterWeight
-				+ "\nNeptünde aðýrlýðý: "+ new DecimalFormat("##.#").format(this.NeptuneWeight)
-				+ "\nUranüsde aðýrlýðý: "+new DecimalFormat("##.#").format(this.UranusWeight)
+				+ "\nNeptünde aðýrlýðý: "+ new DecimalFormat("##.#").format(this.NeptuneWeight)//virgülden sonraki 1 basaðý almasý için formatlanmýþtýr
+				+ "\nUranüsde aðýrlýðý: "+new DecimalFormat("##.#").format(this.UranusWeight)//virgülden sonraki 1 basaðý almasý için formatlanmýþtýr
 				+ "\nAyda aðýrlýðý: "+this.MoonWeight);
 	}
+	//Hesaplanan deðerleri Ekrana Basýldýðý Method
 }
